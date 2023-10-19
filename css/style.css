@@ -1,0 +1,141 @@
+/***** General *****/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.fa-solid {
+  color: rgba(53, 53, 53, 1);
+  width: 12px;
+  height: 16px;
+  border: 1px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(234, 234, 234, 1);
+}
+
+.head-line {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.no-style {
+  text-decoration: none;
+  color: black;
+}
+
+.button-explorez {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.button-explorez [type="submit"] {
+  height: 50px;
+  width: 218px;
+  background-color: rgba(147, 86, 220, 1);
+  border-radius: 25px;
+  color: white;
+}
+
+.Fonctionnement-btn {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  height: 72.38px;
+  width: 70%;
+  margin-bottom: 1em;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+footer {
+  background-color: rgba(53, 53, 53, 1);
+  color: white;
+  width: 100%;
+  padding: 15px;
+  gap: 16px;
+}
+
+footer img {
+  color: white;
+  height: 27px;
+  width: 137.58px;
+}
+
+/**** Restaurants ****/
+
+.restaurants section {
+  width: 100%;
+}
+
+.restaurants {
+  margin-bottom: 50px;
+}
+
+.restaurants-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.restaurants-cards .card {
+  height: 251px;
+  width: 100%;
+}
+
+.restaurants-cards img {
+  height: 175px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 5px;
+}
+
+.restaurants-cards .card-content {
+  width: 100%;
+}
+
+.restaurants-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  margin: 8px;
+}
+
+.restaurants-cards .card-subtitle {
+  margin: 8px;
+}
+
+.restaurants-cards .row {
+  display: flex;
+  flex-direction: row;
+}
