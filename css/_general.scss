@@ -1,0 +1,64 @@
+/***** General *****/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-contenair {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.button-explorez {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.button-explorez [type="submit"] {
+  height: 50px;
+  width: 218px;
+  background-color: rgba(147, 86, 220, 1);
+  border-radius: 25px;
+  color: white;
+}
+
+.Fonctionnement-btn {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  height: 72.38px;
+  width: 70%;
+  margin-bottom: 1em;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+footer {
+  background-color: rgba(53, 53, 53, 1);
+  color: white;
+  padding: 15px;
+  gap: 16px;
+}
+
+footer img {
+  color: white;
+  height: 27px;
+  width: 137.58px;
+}
