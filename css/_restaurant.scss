@@ -1,44 +1,48 @@
 /**** Restaurants ****/
-
-.restaurants section {
-  width: 100%;
-}
-
 .restaurants {
   margin-bottom: 50px;
-}
+  padding: 5%;
+  background-color: #f7f7f7;
 
-.restaurants-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
+  section {
+    width: 100%;
+  }
 
-.restaurants-cards .card {
-  height: 251px;
-  width: 100%;
-}
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 
-.restaurants-cards img {
-  height: 175px;
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 5px;
-}
+  &-cards .card {
+    height: 251px;
+    width: 100%;
+  }
 
-.restaurants-cards .card-content {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
+  &-cards img {
+    height: 175px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 5px;
+  }
 
-.restaurants-cards .card-title {
-  margin-top: 10px;
-  margin-bottom: 4px;
-  margin: 8px;
-}
+  &-cards .card {
+    &-content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-.restaurants-cards .card-subtitle {
-  margin: 8px;
+    &-title {
+      margin-top: 10px;
+      margin-bottom: 4px;
+      margin: 8px;
+    }
+
+    &-subtitle {
+      margin: 8px;
+    }
+  }
 }

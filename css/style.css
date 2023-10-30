@@ -3,37 +3,42 @@
   font-family: "Roboto", sans-serif;
 }
 
+header img {
+  padding: 15px 0px;
+}
+
 .main-contenair {
   margin: auto;
   padding: 0;
   box-sizing: border-box;
 }
 
-h1 {
-  text-align: center;
+.fonctionnement {
+  padding: 15%;
 }
-
-.button-explorez {
+.fonctionnement-btn {
   display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
 }
-
-.button-explorez [type=submit] {
-  height: 50px;
-  width: 218px;
-  background-color: rgb(147, 86, 220);
-  border-radius: 25px;
-  color: white;
-}
-
-.Fonctionnement-btn {
-  background-color: rgba(0, 0, 0, 0.15);
+.fonctionnement-btn button {
+  background-color: #f6f6f6;
+  border: none;
   border-radius: 25px;
   height: 72.38px;
   width: 70%;
   margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.fonctionnement-btn button span {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  color: white;
+  margin-left: -18px;
 }
 
 .card {
@@ -41,12 +46,10 @@ h1 {
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
 .card img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .card-title {
   font-size: 16px;
 }
@@ -57,11 +60,53 @@ footer {
   padding: 15px;
   gap: 16px;
 }
+footer i {
+  display: inline-block;
+  width: 10px;
+  margin-right: 12px;
+}
+footer ul {
+  list-style: none;
+  margin-left: -20px;
+}
+footer li {
+  padding-bottom: 7px;
+}
+footer h4 {
+  font-family: Shrikhand;
+  font-size: 24px;
+  margin: 0;
+  padding-left: 15px;
+  font-weight: 400;
+}
 
-footer img {
+.hero {
+  background-color: #f7f7f7;
+}
+.hero h1 {
+  font-size: 24px;
+  margin: auto;
+  width: 70%;
+  padding-top: 20px;
+}
+.hero p {
+  margin: auto;
+  width: 80%;
+  padding: 20px 0;
+}
+.hero .button-explorez {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.hero .button-explorez [type=submit] {
+  height: 50px;
+  width: 218px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: 0px;
+  border-radius: 25px;
   color: white;
-  height: 27px;
-  width: 137.58px;
 }
 
 /**** Header ****/
@@ -71,11 +116,9 @@ header {
   align-items: center;
   width: 100%;
 }
-
 header img {
   width: 200px;
 }
-
 header .search {
   align-items: center;
   gap: 0.83em;
@@ -108,25 +151,23 @@ header .search {
 }
 
 /**** Restaurants ****/
+.restaurants {
+  margin-bottom: 50px;
+  padding: 5%;
+  background-color: #f7f7f7;
+}
 .restaurants section {
   width: 100%;
 }
-
-.restaurants {
-  margin-bottom: 50px;
-}
-
 .restaurants-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
 }
-
 .restaurants-cards .card {
   height: 251px;
   width: 100%;
 }
-
 .restaurants-cards img {
   height: 175px;
   width: 100%;
@@ -134,19 +175,17 @@ header .search {
   border-top-right-radius: 15px;
   border: 5px;
 }
-
 .restaurants-cards .card-content {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-
 .restaurants-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
   margin: 8px;
 }
-
 .restaurants-cards .card-subtitle {
   margin: 8px;
 }
@@ -163,7 +202,6 @@ header .search {
   text-transform: uppercase;
   margin-left: 10px;
 }
-
 .menu-cards {
   position: relative;
   background-color: #f6f6f6;
@@ -172,23 +210,29 @@ header .search {
   margin-top: -40px;
   padding-top: 8px;
 }
-
-.all-card .card {
-  margin-left: 8px;
-  height: 72px;
-  width: 349px;
+.menu-cards h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  padding-left: 15px;
+  padding-right: 28px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
 }
 
+.all-card .card {
+  margin: 0px 8px;
+  padding: 0px 10px;
+  height: 72px;
+}
 .all-card .card-content {
   margin-left: 15px;
 }
-
 .all-card .card-title {
   font-size: 18px;
   padding-top: 15px;
   margin-bottom: -10px;
 }
-
 .all-card .card-subtitle {
   display: flex;
   justify-content: space-between;
@@ -208,7 +252,6 @@ header .search {
   padding-top: 20px;
   padding-bottom: 40px;
 }
-
 .button-commander [type=submit] {
   height: 50px;
   width: 186px;
@@ -223,5 +266,4 @@ header .search {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 15px 0px;
 }/*# sourceMappingURL=style.css.map */
