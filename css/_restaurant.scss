@@ -12,37 +12,56 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 18px;
-  }
 
-  &-cards .card {
-    height: 251px;
-    width: 100%;
-  }
-
-  &-cards img {
-    height: 175px;
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border: 5px;
-  }
-
-  &-cards .card {
-    &-content {
+    img {
+      height: 175px;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border: 5px;
     }
 
-    &-title {
-      margin-top: 10px;
-      margin-bottom: 4px;
-      margin: 8px;
-    }
+    .card {
+      height: 251px;
+      width: 100%;
+      &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-    &-subtitle {
-      margin: 8px;
+        .fa-heart {
+          bottom: 5%;
+          position: absolute;
+          right: 1%;
+        }
+      }
+
+      &-title {
+        margin-top: 10px;
+        margin-bottom: 4px;
+        margin: 8px;
+      }
+
+      &-subtitle {
+        margin: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .restaurants {
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10% 5%;
+
+      .card {
+        .fa-heart {
+          right: 3%;
+        }
+      }
     }
   }
 }

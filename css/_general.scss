@@ -15,7 +15,7 @@ header {
 }
 
 .fonctionnement {
-  padding: 15%;
+  padding: 2% 5%;
 
   &-btn {
     display: flex;
@@ -100,6 +100,7 @@ footer {
     margin: auto;
     width: 80%;
     padding: 20px 0;
+    font-weight: 300;
   }
   .button-explorez {
     display: flex;
@@ -115,5 +116,34 @@ footer {
     border: 0px;
     border-radius: 25px;
     color: white;
+  }
+}
+
+.new {
+  color: #008766;
+  background-color: #99e2d0;
+  padding: 1% 5%;
+  display: flex;
+  border-radius: 5px;
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  .fonctionnement-btn {
+    flex-direction: row;
+    gap: 2%;
   }
 }
