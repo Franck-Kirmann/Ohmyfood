@@ -26,7 +26,7 @@ header img {
   border: none;
   border-radius: 25px;
   height: 72.38px;
-  width: 70%;
+  width: 96%;
   margin-bottom: 1em;
   display: flex;
   align-items: center;
@@ -82,6 +82,7 @@ footer h4 {
 
 .hero {
   background-color: #f7f7f7;
+  text-align: center;
 }
 .hero h1 {
   font-size: 24px;
@@ -122,7 +123,7 @@ footer h4 {
   font-size: 14px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hero h1 {
     font-size: 40px;
     text-align: center;
@@ -134,6 +135,15 @@ footer h4 {
   .fonctionnement-btn {
     flex-direction: row;
     gap: 2%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
   }
 }
 /**** Header ****/
@@ -179,8 +189,7 @@ header .search {
 
 /**** Restaurants ****/
 .restaurants {
-  margin-bottom: 50px;
-  padding: 5%;
+  padding: 5% 5% 10% 5%;
   background-color: #f7f7f7;
 }
 .restaurants section {
@@ -207,11 +216,13 @@ header .search {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-.restaurants-cards .card-content .fa-heart {
-  bottom: 5%;
-  position: absolute;
-  right: 1%;
+.restaurants-cards .card-content .heart-contener {
+  padding: 20px;
+}
+.restaurants-cards .card-content .heart-contener:hover {
+  background-color: linear-gardiant(#ff79da, #9356dc);
 }
 .restaurants-cards .card-title {
   margin-top: 10px;
@@ -222,14 +233,11 @@ header .search {
   margin: 8px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .restaurants-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10% 5%;
-  }
-  .restaurants-cards .card .fa-heart {
-    right: 3%;
   }
 }
 .euro {
@@ -358,7 +366,7 @@ header .search {
     padding-right: 3%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .menu-cards {
     margin-left: 10%;
     margin-right: 10%;
@@ -371,5 +379,386 @@ header .search {
   .header {
     justify-content: start;
     gap: 40%;
+  }
+}
+/**** loader ***/
+.loader-contener {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  animation: 6s loader forwards;
+}
+.loader-contener .superpose {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: -44px;
+}
+.loader-contener .superpose .Ohmyfood {
+  animation: ohmyfood 2s forwards;
+  opacity: 0;
+}
+.loader-contener .superpose .Ohmyfood,
+.loader-contener .superpose .Ohmyfood2 {
+  position: absolute;
+  text-align: center;
+  font-family: Shrikhand;
+  font-size: 32px;
+}
+.loader-contener .superpose .Ohmyfood2 {
+  background: linear-gradient(#ff79da, #9356dc);
+  padding: 0 500px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: TextColor 3s forwards 2s;
+  opacity: 0;
+}
+.loader-contener .loading {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.loader-contener .loading span {
+  animation: loading 4s forwards;
+  opacity: 0;
+}
+.loader-contener .loading span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loader-contener .loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader-contener .loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loader-contener .loading span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loader-contener .loading span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.loader-contener .loading span:nth-child(6) {
+  animation-delay: 1s;
+}
+.loader-contener .loading span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.loader-contener .loading span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.loader-contener .loading span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.loader-contener .loading span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+.loader-contener .casseroleflame {
+  width: 200px;
+  height: 24px;
+  position: relative;
+}
+.loader-contener .casseroleflame .casserole {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 20px 0 0 20px;
+  border-radius: 100% 0% 50% 50%/0% 0% 100% 100%;
+}
+.loader-contener .casseroleflame .manche {
+  width: 50%;
+  height: 50%;
+  background-color: #999;
+  position: absolute;
+  top: -10%;
+  left: 95%;
+  transform: translate(0, -50%);
+  border-radius: 100% 0% 100% 0%/100% 0% 100% 0%;
+}
+.loader-contener .casseroleflame .group-flames {
+  animation: startflame 5s forwards;
+}
+.loader-contener .casseroleflame .group-flames .flames {
+  position: absolute;
+  bottom: -40%;
+  right: 0%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 5%, orange 30%, red 80%);
+  border-radius: 100% 0% 75% 25%/100% 0% 100% 0%;
+  animation: flames 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames1 {
+  position: absolute;
+  bottom: -40%;
+  left: 0%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, orange 30%, red 80%);
+  border-radius: 0% 100% 25% 75%/0% 100% 0% 100%;
+  animation: flames1 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames2 {
+  position: absolute;
+  bottom: -35%;
+  right: 10%;
+  width: 40%;
+  rotate: -2deg;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 5%, orange 30%, red 80%);
+  border-radius: 100% 0% 75% 25%/100% 0% 100% 0%;
+  animation: flames 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames3 {
+  position: absolute;
+  bottom: -35%;
+  left: 10%;
+  rotate: 2deg;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, orange 30%, red 80%);
+  border-radius: 0% 100% 25% 75%/0% 100% 0% 100%;
+  animation: flames1 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames4 {
+  position: absolute;
+  bottom: -35%;
+  right: 20%;
+  width: 30%;
+  rotate: -4deg;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 5%, orange 30%, red 80%);
+  border-radius: 100% 0% 75% 25%/100% 0% 100% 0%;
+  animation: flames 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames5 {
+  position: absolute;
+  bottom: -35%;
+  left: 20%;
+  rotate: 4deg;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, orange 30%, red 80%);
+  border-radius: 0% 100% 25% 75%/0% 100% 0% 100%;
+  animation: flames1 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames6 {
+  position: absolute;
+  bottom: -35%;
+  right: 30%;
+  width: 20%;
+  rotate: -6deg;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 5%, orange 30%, red 80%);
+  border-radius: 100% 0% 75% 25%/100% 0% 100% 0%;
+  animation: flames 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames7 {
+  position: absolute;
+  bottom: -35%;
+  left: 30%;
+  rotate: 6deg;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, orange 30%, red 80%);
+  border-radius: 0% 100% 25% 75%/0% 100% 0% 100%;
+  animation: flames1 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames8 {
+  position: absolute;
+  bottom: -33%;
+  right: 38%;
+  width: 15%;
+  rotate: -8deg;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 5%, orange 30%, red 80%);
+  border-radius: 100% 0% 100% 0%/100% 0% 100% 0%;
+  animation: flames2 1s infinite;
+}
+.loader-contener .casseroleflame .group-flames .flames9 {
+  position: absolute;
+  bottom: -33%;
+  left: 38%;
+  rotate: 6deg;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, orange 30%, red 80%);
+  border-radius: 0% 100% 0% 100%/0% 100% 0% 100%;
+  animation: flames3 1s infinite;
+}
+
+@media screen and (max-width: 400px) {
+  .loader-contener .superpose {
+    top: -32px;
+  }
+  .loader-contener .superpose .Ohmyfood,
+  .loader-contener .superpose .Ohmyfood2 {
+    font-size: 24px;
+  }
+  .loader-contener .loading {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .loader-contener .casseroleflame {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .loader-contener .superpose {
+    top: -80px;
+  }
+  .loader-contener .superpose .Ohmyfood,
+  .loader-contener .superpose .Ohmyfood2 {
+    font-size: 64px;
+  }
+  .loader-contener .loading {
+    font-size: 35px;
+    margin-bottom: 70px;
+  }
+  .loader-contener .casseroleflame {
+    width: 450px;
+    height: 60px;
+  }
+}
+@keyframes loader {
+  90% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+@keyframes ohmyfood {
+  0% {
+    transform: translateY(-250%);
+  }
+  85% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: translateY(-500%);
+  }
+  85% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes TextColor {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes startflame {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes flames {
+  0% {
+    border-radius: 100% 0% 75% 25%/100% 20% 80% 0%;
+  }
+  20% {
+    border-radius: 75% 25% 50% 50%/100% 0% 100% 0%;
+  }
+  40% {
+    border-radius: 50% 50% 75% 25%/100% 20% 80% 0%;
+  }
+  60% {
+    border-radius: 25% 75% 50% 50%/100% 0% 100% 0%;
+  }
+  80% {
+    border-radius: 50% 50% 75% 25%/100% 20% 80% 0%;
+  }
+  100% {
+    border-radius: 75% 25% 50% 50%/100% 0% 100% 0%;
+  }
+}
+@keyframes flames1 {
+  0% {
+    border-radius: 0% 100% 25% 75%/20% 100% 0% 80%;
+  }
+  20% {
+    border-radius: 25% 75% 50% 50%/0% 100% 0% 100%;
+  }
+  40% {
+    border-radius: 50% 50% 25% 75%/20% 100% 0% 80%;
+  }
+  60% {
+    border-radius: 75% 25% 50% 50%/0% 100% 0% 100%;
+  }
+  80% {
+    border-radius: 50% 50% 25% 75%/20% 100% 0% 80%;
+  }
+  100% {
+    border-radius: 25% 75% 50% 50%/0% 100% 0% 100%;
+  }
+}
+@keyframes flames2 {
+  0% {
+    border-radius: 100% 0% 100% 0%/100% 0% 100% 0%;
+  }
+  20% {
+    border-radius: 100% 0% 100% 0%/85% 15% 85% 15%;
+  }
+  40% {
+    border-radius: 100% 0% 100% 0%/80% 20% 80% 20%;
+  }
+  60% {
+    border-radius: 100% 0% 100% 0%/80% 20% 80% 20%;
+  }
+  80% {
+    border-radius: 100% 0% 100% 0%/85% 15% 85% 15%;
+  }
+  100% {
+    border-radius: 100% 0% 100% 0%/90% 10% 90% 10%;
+  }
+}
+@keyframes flames3 {
+  0% {
+    border-radius: 0% 100% 0% 100%/0% 100% 0% 100%;
+  }
+  20% {
+    border-radius: 0% 100% 0% 100%/15% 85% 15% 85%;
+  }
+  40% {
+    border-radius: 0% 100% 0% 100%/20% 80% 20% 80%;
+  }
+  60% {
+    border-radius: 0% 100% 0% 100%/20% 80% 20% 80%;
+  }
+  80% {
+    border-radius: 0% 100% 0% 100%/15% 85% 15% 85%;
+  }
+  100% {
+    border-radius: 0% 100% 0% 100%/10% 90% 10% 90%;
   }
 }/*# sourceMappingURL=style.css.map */

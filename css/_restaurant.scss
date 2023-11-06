@@ -1,7 +1,6 @@
 /**** Restaurants ****/
 .restaurants {
-  margin-bottom: 50px;
-  padding: 5%;
+  padding: 5% 5% 10% 5%;
   background-color: #f7f7f7;
 
   section {
@@ -29,11 +28,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
 
-        .fa-heart {
-          bottom: 5%;
-          position: absolute;
-          right: 1%;
+        .heart-contener {
+          padding: 20px;
+
+          &:hover {
+            background-color: linear-gardiant(#ff79da, #9356dc);
+          }
         }
       }
 
@@ -50,18 +52,12 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .restaurants {
     &-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10% 5%;
-
-      .card {
-        .fa-heart {
-          right: 3%;
-        }
-      }
     }
   }
 }

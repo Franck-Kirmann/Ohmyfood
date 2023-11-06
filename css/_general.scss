@@ -27,7 +27,7 @@ header {
       border: none;
       border-radius: 25px;
       height: 72.38px;
-      width: 70%;
+      width: 96%;
       margin-bottom: 1em;
       display: flex;
       align-items: center;
@@ -88,6 +88,7 @@ footer {
 
 .hero {
   background-color: #f7f7f7;
+  text-align: center;
 
   h1 {
     font-size: 24px;
@@ -131,7 +132,7 @@ footer {
   font-size: 14px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .hero {
     h1 {
       font-size: 40px;
@@ -145,5 +146,14 @@ footer {
   .fonctionnement-btn {
     flex-direction: row;
     gap: 2%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+    }
   }
 }
