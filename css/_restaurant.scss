@@ -55,7 +55,6 @@
 @media screen and (min-width: 1024px) {
   .restaurants {
     &-cards {
-      display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10% 5%;
     }
