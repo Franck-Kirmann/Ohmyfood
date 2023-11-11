@@ -73,9 +73,13 @@ footer {
   ul {
     list-style: none;
     margin-left: -20px;
-  }
-  li {
-    padding-bottom: 7px;
+    li {
+      padding-bottom: 7px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
   h4 {
     font-family: Shrikhand;
