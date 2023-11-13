@@ -14,6 +14,10 @@ header {
     gap: 0.83em;
     width: 100%;
     height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(234, 234, 234, 1);
+    box-shadow: inset 0px 2px 4px 0px #00000026;
   }
 }
 
@@ -22,12 +26,6 @@ header {
   width: 12px;
   height: 16px;
   border: 1px;
-}
-
-.search {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(234, 234, 234, 1);
 }
 
 .head-line {
@@ -39,4 +37,12 @@ header {
 .no-style {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    .search {
+      box-shadow: unset;
+    }
+  }
 }

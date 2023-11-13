@@ -19,6 +19,43 @@
     padding-top: 8px;
     animation: menu 0.5s forwards;
 
+    .heart-contener {
+      padding: 25px;
+      position: relative;
+      left: -15px;
+
+      .fa-regular,
+      .fa-solid {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .fa-regular {
+      scale: 1.5;
+      transform: translate(25%, 25%);
+    }
+    .fa-solid {
+      scale: 0.1;
+      opacity: 0;
+      transform: translate(375%, 375%);
+    }
+    .heart-contener:hover {
+      .fa-regular {
+        transform: translate(25%, 25%) scale(0);
+        transition: transform 0.5s;
+      }
+      .fa-solid {
+        display: block;
+        opacity: 1;
+        background-image: linear-gradient(#ff79da, #9356dc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform 0.5s 0.5s, opacity 0.5s 0.1s;
+        transform: translate(375%, 375%) scale(15);
+      }
+    }
+
     .animationcard {
       opacity: 0;
       animation: card 1s forwards 0.5s;
@@ -80,14 +117,14 @@
           background-color: #99e2d0;
           transition: width 1s;
           i {
-            display: none;
+            opacity: 0;
             float: right;
             padding: 10% 10%;
             border-radius: 50%;
             background-color: white;
             color: #99e2d0;
-            transition: transform 1s ease;
-            transform: rotate(0deg) translate(0px, 0px);
+            transition: transform 1s, opacity 1s ease-in-out;
+            transform: rotate(0deg) translate(-20px, 0px);
           }
         }
       }
@@ -96,9 +133,9 @@
         .check {
           width: 75px;
           i {
-            display: inline-block;
-            // animation: check 0.9s forwards 0.1s;
+            opacity: 1; // animation: check 0.9s forwards 0.1s;
             transform: rotate(360deg) translate(-20px, 20px);
+            transform-origin: center;
           }
         }
       }

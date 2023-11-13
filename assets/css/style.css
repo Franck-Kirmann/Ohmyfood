@@ -21,6 +21,9 @@ header img {
   flex-direction: column;
   align-items: center;
 }
+.fonctionnement-btn button:hover i {
+  color: #9356dc;
+}
 .fonctionnement-btn button {
   background-color: #f6f6f6;
   border: none;
@@ -106,6 +109,9 @@ footer h4 {
   padding-top: 15px;
   padding-bottom: 30px;
 }
+.hero .button-explorez:hover {
+  opacity: 0.8;
+}
 .hero .button-explorez [type=submit] {
   height: 50px;
   width: 218px;
@@ -165,6 +171,10 @@ header .search {
   gap: 0.83em;
   width: 100%;
   height: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(234, 234, 234);
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
 .fa-location-dot {
@@ -172,12 +182,6 @@ header .search {
   width: 12px;
   height: 16px;
   border: 1px;
-}
-
-.search {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(234, 234, 234);
 }
 
 .head-line {
@@ -191,6 +195,11 @@ header .search {
   color: black;
 }
 
+@media screen and (min-width: 1024px) {
+  header .search {
+    box-shadow: unset;
+  }
+}
 /**** Restaurants ****/
 .restaurants {
   padding: 5% 5% 10% 5%;
@@ -223,18 +232,43 @@ header .search {
   align-items: center;
 }
 .restaurants-cards .card-content .heart-contener {
-  padding: 20px;
+  padding: 15px;
+  position: relative;
+  left: -15px;
 }
-.restaurants-cards .card-content .heart-contener:hover {
-  background-color: linear-gardiant(#ff79da, #9356dc);
+.restaurants-cards .card-content .heart-contener .fa-regular,
+.restaurants-cards .card-content .heart-contener .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.restaurants-cards .card-content .fa-regular {
+  scale: 1.5;
+  transform: translate(25%, 25%);
+}
+.restaurants-cards .card-content .fa-solid {
+  scale: 0.1;
+  opacity: 0;
+  transform: translate(375%, 375%);
+}
+.restaurants-cards .card-content .heart-contener:hover .fa-regular {
+  transform: translate(25%, 25%) scale(0);
+  transition: transform 0.5s;
+}
+.restaurants-cards .card-content .heart-contener:hover .fa-solid {
+  display: block;
+  opacity: 1;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.5s 0.5s, opacity 0.5s 0.1s;
+  transform: translate(375%, 375%) scale(15);
 }
 .restaurants-cards .card-title {
-  margin-top: 10px;
-  margin-bottom: 4px;
-  margin: 8px;
+  margin: 8px 15px;
 }
 .restaurants-cards .card-subtitle {
-  margin: 8px;
+  margin: 8px 15px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -263,6 +297,39 @@ header .search {
   margin-top: -40px;
   padding-top: 8px;
   animation: menu 0.5s forwards;
+}
+.menu-cards .heart-contener {
+  padding: 25px;
+  position: relative;
+  left: -15px;
+}
+.menu-cards .heart-contener .fa-regular,
+.menu-cards .heart-contener .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu-cards .fa-regular {
+  scale: 1.5;
+  transform: translate(25%, 25%);
+}
+.menu-cards .fa-solid {
+  scale: 0.1;
+  opacity: 0;
+  transform: translate(375%, 375%);
+}
+.menu-cards .heart-contener:hover .fa-regular {
+  transform: translate(25%, 25%) scale(0);
+  transition: transform 0.5s;
+}
+.menu-cards .heart-contener:hover .fa-solid {
+  display: block;
+  opacity: 1;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.5s 0.5s, opacity 0.5s 0.1s;
+  transform: translate(375%, 375%) scale(15);
 }
 .menu-cards .animationcard {
   opacity: 0;
@@ -324,14 +391,14 @@ header .search {
   transition: width 1s;
 }
 .menu-cards .all-card .card .check i {
-  display: none;
+  opacity: 0;
   float: right;
   padding: 10% 10%;
   border-radius: 50%;
   background-color: white;
   color: #99e2d0;
-  transition: transform 1s ease;
-  transform: rotate(0deg) translate(0px, 0px);
+  transition: transform 1s, opacity 1s ease-in-out;
+  transform: rotate(0deg) translate(-20px, 0px);
 }
 .menu-cards .all-card .card:hover .check,
 .menu-cards .all-card .card:active .check {
@@ -339,8 +406,9 @@ header .search {
 }
 .menu-cards .all-card .card:hover .check i,
 .menu-cards .all-card .card:active .check i {
-  display: inline-block;
+  opacity: 1;
   transform: rotate(360deg) translate(-20px, 20px);
+  transform-origin: center;
 }
 .menu-cards h1 {
   font-family: Shrikhand;
