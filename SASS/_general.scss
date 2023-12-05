@@ -22,6 +22,12 @@ header {
     flex-direction: column;
     align-items: center;
 
+    p {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+
     button:hover {
       i {
         color: #9356dc;
@@ -55,10 +61,6 @@ header {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-
-  img {
-    object-fit: cover;
-  }
 
   &-title {
     font-size: 16px;
@@ -159,6 +161,9 @@ footer {
   .fonctionnement-btn {
     flex-direction: row;
     gap: 2%;
+    p {
+      text-align: start;
+    }
   }
   footer {
     display: flex;

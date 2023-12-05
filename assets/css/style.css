@@ -21,6 +21,11 @@ header img {
   flex-direction: column;
   align-items: center;
 }
+.fonctionnement-btn p {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
 .fonctionnement-btn button:hover i {
   color: #9356dc;
 }
@@ -48,10 +53,6 @@ header img {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .card-title {
   font-size: 16px;
@@ -146,6 +147,9 @@ footer h4 {
     flex-direction: row;
     gap: 2%;
   }
+  .fonctionnement-btn p {
+    text-align: start;
+  }
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -214,6 +218,10 @@ header .search {
   gap: 18px;
 }
 .restaurants-cards img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 60%;
+     object-position: 0% 60%;
   height: 175px;
   width: 100%;
   border-top-left-radius: 15px;
